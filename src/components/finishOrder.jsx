@@ -37,7 +37,7 @@ function FirstStepContent(props){
     const token=cookies.token
        const UserDetailes=async()=>{
         try {
-          return await axios.get(`http://localhost:3000/users/getUser/${token}`)
+          return await axios.get(`https://server-spuh.onrender.com/users/getUser/${token}`)
         } catch (error) {
           console.log(error);
         }
@@ -122,7 +122,7 @@ function SecondStepContent(props){
   const [cookies, setCookie] = useCookies(['token']);
   const [success,setSuccess]=useState()
   const token=cookies.token
-  const url='http://localhost:3000/orders/add'
+  const url='https://server-spuh.onrender.com/orders/add'
   const products=localStorage.getItem('id').split(',')
   const total_price=localStorage.getItem('total_price')
   console.log(products);
@@ -135,7 +135,7 @@ function SecondStepContent(props){
  const sendMail=async()=>{
   if(newOrder){
 
-    const response= await axios.post('http://localhost:3000/orders/getBill',{
+    const response= await axios.post('https://server-spuh.onrender.com/orders/getBill',{
       order:newOrder
       })
       console.log('response');

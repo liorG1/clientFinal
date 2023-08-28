@@ -35,7 +35,7 @@ export default function Cart(){
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [data,setData]=useState()
     const [loading,setLoading]=useState()
-    const url=`http://localhost:3000/products/ById/`
+    const url=`https://server-spuh.onrender.com/products/ById/`
     const orderd_ids=localStorage.getItem('id')?localStorage.getItem('id').split(','):[]
    const ordered_products=[]
    let [totalPrice,setTotal]=useState(0)
@@ -80,57 +80,7 @@ setTotal(totalPrice= totalPrice+num)
     },[totalPrice])
 
     return(
-       /*  <>
-        <Button onClick={onOpen}>Open Modal</Button>
-        <Modal isOpen={isOpen} onClose={onClose}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>shpping cart</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>
-            <TableContainer>
-  <Table variant='simple'>
-    <TableCaption>Imperial to metric conversion factors</TableCaption>
-
-    <Tbody>
-      {
-         data&&data.map(element => {
-        return(
-         <Tr key={element}>
-              <Td  key={element}>{element.data.product.name}</Td>
-              <Td> <Image alt='product image' src={element.data.product.img} /> </Td>
-              <Td>{element.data.product.price}</Td>
-              <Td ><Button onClick={()=>{deletFromCart(element.data.product._id)}} colorScheme='blue'>Button</Button></Td>
-         </Tr>
-        )
-      })
-    }
-    </Tbody>
-    <Tfoot>
-      {<Td>total price :{totalPrice}</Td>}
-    </Tfoot>
-  </Table>
-</TableContainer>
-            <TableContainer>
-  <Table variant='simple'>
- 
-  </Table>
-</TableContainer>
-
-
-
-
-            </ModalBody>
-  
-            <ModalFooter>
-              <Button colorScheme='blue' mr={3} onClick={onClose}>
-                Close
-              </Button>
-              <Button variant='ghost' onClick={FinishOrder} >Finish order</Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-      </> */
+    
       <>
       <Button backgroundColor={'#CBB26A'} _hover={{backgroundColor:'#CBB26A'}} onClick={onOpen}><Image backgroundColor={'#CBB26A'} src="/cart.png"  alt="cart"></Image></Button>
       <Drawer  placement='right' onClose={onClose} isOpen={isOpen}>

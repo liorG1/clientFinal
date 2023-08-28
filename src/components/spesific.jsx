@@ -30,7 +30,7 @@ import {
  /*  console.log(currentItemn); */
  console.log(currentItemn);
   
-    const url = `http://localhost:3000/products/ById/${currentItemn}`;
+    const url = `https://server-spuh.onrender.com/products/ById/${currentItemn}`;
     const fetch = async () => {
       try {
         const response = await axios.get(url);

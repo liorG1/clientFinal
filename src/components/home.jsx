@@ -16,7 +16,7 @@ export default function Home(){
     const [Login,setLogin]=useState(false)
     const fetch=async()=>{
         try {
-            const response=await axios.get('http://localhost:3000/products/all')
+            const response=await axios.get('https://server-spuh.onrender.com/products/all')
             if (cookies.token){
               setLogin(true)
             }
@@ -68,39 +68,7 @@ export default function Home(){
 </Box>
 
 <Box display={'flex'} flexDirection={['column','row']} gap={10}>
-{/* {
-    data&&data.map(product=>{return(
-<Card maxW='sm' key={product.id} >
-  <CardBody key={product.id} >
-    <Image key={product.img}
-      src={product.img}
-      alt='Green double couch with wooden legs'
-      borderRadius='lg'
-    />
-    <Stack mt='6' spacing='3' key={product.id}>
-      <Heading key={product.id} size='md'>Living room Sofa</Heading>
-   
-      <Text color='blue.600' fontSize='2xl'>
-        $450
-      </Text>
-    </Stack>
-  </CardBody>
-  <Divider key={product.id} />
-  <CardFooter key={product.id}>
-    <ButtonGroup spacing='2' key={product.id}>
-     
-     {
-      Login&&
-      <Button    variant='solid' colorScheme='blue' onClick={()=>{location.assign(`/products/byId/${product._id}`)}}>
-        Add to cart
-      </Button>
-     }
-    </ButtonGroup>
-  </CardFooter>
-</Card>
-     ) })
 
-} */}
 
 </Box>
 <Footer></Footer>
