@@ -10,10 +10,11 @@ export default function ProductById(){
     const [data,setData]=useState()
     const [loading,setLoading]=useState()
     const [BuyingDetails,setDetaile]=useState({size:null,total_price:null})
-    const url=`http://localhost:3000/products/ById/${id}`
+    const url=`https://server-spuh.onrender.com/products/ById/${id}`
     const fetch=async()=>{
         try {
             const response=await axios.get(url)
+            console.log(response);
             return response
         } catch (error) {
             console.log(error)

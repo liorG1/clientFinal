@@ -45,7 +45,7 @@ export default function Registrate(){
 
             try {
                 const response=await axios.post(
-                    "http://localhost:3000/users/registrate",
+                    "https://server-spuh.onrender.com/users/registrate",
                     userDetails,
                     {
                        headers :{"Content-Type":"application/json"},

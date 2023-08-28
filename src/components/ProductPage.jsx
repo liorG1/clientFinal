@@ -11,7 +11,7 @@ export default function ProductPage (){
     const [loading,setLoading]=useState()
     const [cookies, setCookie] = useCookies(['token']);
     const [Login,setLogin]=useState(false)
-    const url=`http://localhost:3000/products/ByName/${name}`
+    const url=`https://server-spuh.onrender.com/products/ByName/${name}`
     const fetch=async()=>{
       if (cookies.token){
         setLogin(true)
