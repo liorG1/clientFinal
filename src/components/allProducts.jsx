@@ -15,7 +15,7 @@ export default function AllProducts(){
     const [Login,setLogin]=useState(false)
 
     const fetch=async()=>{
-        const response=axios.get('http://localhost:3000/products/all')
+        const response=axios.get('https://server-spuh.onrender.com/products/all')
         if (cookies.token){
             setLogin(true)
           }
