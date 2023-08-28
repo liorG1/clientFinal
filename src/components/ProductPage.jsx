@@ -11,6 +11,7 @@ export default function ProductPage (){
     const [loading,setLoading]=useState()
     const [cookies, setCookie] = useCookies(['token']);
     const [Login,setLogin]=useState(false)
+    const [id,setId]=useState()
     const url=`https://server-spuh.onrender.com/products/ByName/${name}`
     const fetch=async()=>{
       if (cookies.token){
@@ -18,6 +19,7 @@ export default function ProductPage (){
       }
         const product=await axios.get(url)
         console.log(product.data.product);
+        setId(product.data.product.id)
         return product.data.product
     }
     useEffect(()=>{
@@ -28,7 +30,7 @@ export default function ProductPage (){
     },[loading])
 
 
-    const addToCart=(id)=>{
+    const addToCart=()=>{
       let items=localStorage.getItem('id')?[ localStorage.getItem('id')]:[]
       console.log(`id : ${id}`);
       items.push(id)
@@ -63,7 +65,7 @@ export default function ProductPage (){
     <ButtonGroup spacing='2' key={product.id}>
       {
       Login&&
-      <Button    variant='solid' colorScheme='blue' onClick={()=>{addToCart(product._id)}} >
+      <Button    variant='solid' colorScheme='blue' onClick={addToCart} >
         Add to cart
       </Button>
      }
