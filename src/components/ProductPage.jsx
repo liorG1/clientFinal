@@ -4,8 +4,11 @@ import { useEffect, useState } from 'react'
 import { useCookies } from 'react-cookie'
 import { useParams } from 'react-router-dom'
 import Footer from './footer'
+import { useToast } from '@chakra-ui/react'
+
 
 export default function ProductPage (){
+    const toast = useToast()
     const name=useParams('name').name
     const [data,setData]=useState([])
     const [loading,setLoading]=useState()
@@ -35,7 +38,13 @@ export default function ProductPage (){
       console.log(`id : ${id}`);
       items.push(id)
       localStorage.setItem('id',items)
-      location.reload()
+      toast({
+        title: 'Success Login.',
+        description: `Wellcome ${userDetails.name}`,
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      })
       } 
     return (
 <Box display={'flex'} height={'80%'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} >
