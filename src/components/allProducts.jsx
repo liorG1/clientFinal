@@ -152,7 +152,7 @@ export default function AllProducts(){
             </Box>
             </Box>
             <Box  width={['70%']} >
-                {loading==true&& <Spinner/>}
+                {loading==true&& <Spinner size={'xl'} color={"white"}/>}
                 <Grid height={['500vh','100vh']}   templateColumns={['repeat(1,1fr)','repeat(2,1fr)','repeat(3,1fr)']} templateRows={'repeat(2,1fr)'} rowGap={'5%'}>
 {data&&data .filter((pro)=>{ if(brands.length>0){return brands.includes(pro.brand)} else return pro}) .filter((pro)=>{ if(catagories.length>0){return catagories.includes(pro.catagory)} else return pro}).slice(firstProduct,lastProduct).map(pro=>{
     return(
