@@ -40,7 +40,7 @@ export default function ProductPage (){
       localStorage.setItem('id',items)
       toast({
         title: 'Success Login.',
-        description: `Wellcome ${userDetails.name}`,
+        description: `Success add to shopping card`,
         status: 'success',
         duration: 9000,
         isClosable: true,
