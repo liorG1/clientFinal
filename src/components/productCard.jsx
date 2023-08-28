@@ -1,4 +1,4 @@
-import {Select,Input, Image,Button,Text,Heading,Stack, Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
+import {Box,Select,Input, Image,Button,Text,Heading,Stack, Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 import axios from 'axios'
 import { useEffect, useState ,useContext} from 'react'
 /* import { CartContext, CurrentProduct } from '../context/cartContext' */
