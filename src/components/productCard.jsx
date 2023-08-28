@@ -33,7 +33,7 @@ export default function ProductById(){
     localStorage.setItem('id',items)
     toast({
       title: 'Success Login.',
-      description: `Wellcome ${userDetails.name}`,
+      description: `Succes adding to shopping cart}`,
       status: 'success',
       duration: 9000,
       isClosable: true,
