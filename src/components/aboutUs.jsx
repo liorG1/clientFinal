@@ -18,7 +18,7 @@ export default function About(){
     return (
         <>
         
-        <video width={'100%'}  src='/public/video.mp4' autoPlay={true} loop={true}></video>
+        <video width={'100%'}  src='./video.mp4' autoPlay={true} loop={true}></video>
         <div style={{width:'100%',height:'50%',display:'flex',justifyContent:'center',alignItems:'center',position:'relative' ,top:'-100px'}}>
 <div style={{backgroundColor:'#CBB26A',width:'90%',textAlign:'center',borderRadius:'20px'}}>
 
