@@ -28,8 +28,9 @@ export default function ProductPage (){
     },[loading])
 
 
-    const addToCart=()=>{
+    const addToCart=(id)=>{
       let items=localStorage.getItem('id')?[ localStorage.getItem('id')]:[]
+      console.log(`id : ${id}`);
       items.push(id)
       localStorage.setItem('id',items)
       } 
@@ -62,7 +63,7 @@ export default function ProductPage (){
     <ButtonGroup spacing='2' key={product.id}>
       {
       Login&&
-      <Button    variant='solid' colorScheme='blue' onClick={addToCart} >
+      <Button    variant='solid' colorScheme='blue' onClick={()=>{addToCart(product.id)}} >
         Add to cart
       </Button>
      }
