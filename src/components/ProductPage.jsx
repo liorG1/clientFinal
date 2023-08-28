@@ -26,6 +26,13 @@ export default function ProductPage (){
         setLoading(true)
       })
     },[loading])
+
+
+    const addToCart=()=>{
+      let items=localStorage.getItem('id')?[ localStorage.getItem('id')]:[]
+      items.push(id)
+      localStorage.setItem('id',items)
+      } 
     return (
 <Box display={'flex'} height={'80%'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} >
 {
@@ -55,7 +62,7 @@ export default function ProductPage (){
     <ButtonGroup spacing='2' key={product.id}>
       {
       Login&&
-      <Button    variant='solid' colorScheme='blue' onClick={()=>{location.assign(`/products/byId/${product._id}`)}}>
+      <Button    variant='solid' colorScheme='blue' onClick={addToCart} >
         Add to cart
       </Button>
      }
