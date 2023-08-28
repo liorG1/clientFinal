@@ -77,7 +77,7 @@ function Nav() {
   }
  */
   return (
-    <div style={{'display':'flex','flexDirection':'column','backgroundColor':'red','align-items':'center'}}>
+    <div style={{'display':'flex','flexDirection':'column','backgroundColor':'black','align-items':'center'}}>
     <Image w={['80%','30%']} borderRadius={'20px'} src="/logo.png"></Image>
       <Flex justifyContent={'center'} alignItems={'center'} direction={["column", "row"]} sx={nav_styles}>
 
