@@ -4,8 +4,10 @@ import { useEffect, useState ,useContext} from 'react'
 /* import { CartContext, CurrentProduct } from '../context/cartContext' */
 import { useParams } from 'react-router-dom'
 import Footer from './footer'
+import { useToast } from '@chakra-ui/react'
 
 export default function ProductById(){
+  const toast = useToast()
     const {id}=useParams()
     const [data,setData]=useState()
     const [loading,setLoading]=useState()
@@ -29,10 +31,17 @@ export default function ProductById(){
     let items=localStorage.getItem('id')?[ localStorage.getItem('id')]:[]
     items.push(id)
     localStorage.setItem('id',items)
+    toast({
+      title: 'Success Login.',
+      description: `Wellcome ${userDetails.name}`,
+      status: 'success',
+      duration: 9000,
+      isClosable: true,
+    })
     } 
     
     return(
-        <>
+      <Box display={'flex'} height={'80%'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} >
         {
             data&&<Card
             direction={{ base: 'column', sm: 'row' }}
@@ -78,6 +87,6 @@ export default function ProductById(){
           </Card> 
         }
         <Footer></Footer>
-        </>
+        </Box>
     )
 }

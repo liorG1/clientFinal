@@ -177,7 +177,7 @@ export default function AllProducts(){
                                    
                                     {
       Login&&
-      <Button    variant='solid' colorScheme='blue' onClick={()=>{location.assign(`/products/byName/${pro.name}`)}}>
+      <Button    variant='solid' colorScheme='blue' onClick={()=>{location.assign(`/products/byId/${pro._id}`)}}>
         Add to cart
       </Button>
      }
