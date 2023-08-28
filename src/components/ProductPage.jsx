@@ -35,6 +35,7 @@ export default function ProductPage (){
       console.log(`id : ${id}`);
       items.push(id)
       localStorage.setItem('id',items)
+      location.reload()
       } 
     return (
 <Box display={'flex'} height={'80%'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} >
