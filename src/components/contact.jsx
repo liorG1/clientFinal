@@ -4,7 +4,7 @@ import {Flex,Text,Image ,Grid,GridItem,Input,Button,Box,Textarea} from '@chakra-
 export default function Contact(){
 
     return(
-        <Flex direction={['column','row']} justifyContent='space-around'>
+        <Flex direction={['column','row']} alignItems='center'>
             <Image src='https://qph.cf2.quoracdn.net/main-qimg-a60584595d47ece95e9c53714c16b3b1-lq'/>
             <Flex  direction='column' borderRadius='10px' bg={'#CBB26A'}  alignItems='center'>
                 <Text fontSize='3em' font='bold'>Contact us </Text>
