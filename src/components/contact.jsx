@@ -1,5 +1,5 @@
 
-import {Flex,Text,Image ,Grid,GridItem,Input,Button,Box} from '@chakra-ui/react'
+import {Flex,Text,Image ,Grid,GridItem,Input,Button,Box,Textarea} from '@chakra-ui/react'
 
 export default function Contact(){
 
@@ -12,7 +12,7 @@ export default function Contact(){
                     <Flex direction='column' gap={'5px'}>
                     <Input borderButtom='black' placeholder='Full Name'/>
                     <Input type='email' borderButtom='black' placeholder='E- mail'/>
-                    <Input type='Message' borderButtom='black' placeholder='Message'/>  
+                    <Textarea  placeholder='Message'/>  
                     <Button backGroundColor='#CBB26A' width='100%'>Contact us</Button>
                     </Flex>
 <Flex direction='column'>
