@@ -6,10 +6,10 @@ export default function Contact(){
     return(
         <Flex>
             <Image src='https://qph.cf2.quoracdn.net/main-qimg-a60584595d47ece95e9c53714c16b3b1-lq'/>
-            <Flex  direction='column' backGroundColor='#CBB26A' >
+            <Flex  direction='row' bg={'#CBB26A'} >
                 <Text fontSize='3em' font='bold'>Contact us </Text>
                 <Box>
-                    <Flex direction='column'>
+                    <Flex direction='column' gap={'5px'}>
                     <Input borderButtom='black' placeholder='Full Name'/>
                     <Input type='email' borderButtom='black' placeholder='E- mail'/>
                     <Input type='Message' borderButtom='black' placeholder='Message'/>  
