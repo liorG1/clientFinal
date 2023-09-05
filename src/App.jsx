@@ -16,6 +16,7 @@ import { CookiesProvider } from 'react-cookie';
 import Login from './components/Login'
 import Registrate from './components/registrate'
 import AllProducts from './components/allProducts'
+import Contact from './components/contact'
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path='/orders/finishOrder' element={<FinishOrder/>}/>
           <Route path='/Login' element={<Login/>}/>
           <Route path='/Registrate' element={<Registrate/>}/>
+          <Route path='contact' element={<Contact/>}></Route>
       </Route>
       </>
     )
