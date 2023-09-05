@@ -8,14 +8,19 @@ export default function Contact(){
             <Image src='https://qph.cf2.quoracdn.net/main-qimg-a60584595d47ece95e9c53714c16b3b1-lq'/>
             <Flex  direction='column' backGroundColor='#CBB26A' >
                 <Text fontSize='3em' font='bold'>Contact us </Text>
-                <Grid templateRows='repeat(4, 1fr)' templateColumns='repeat(2, 1fr)'>
-                    <GridItem rowSpan='1' colSpan='1'><Input borderButtom='black' placeholder='Full Name'></Input></GridItem>
-                    <GridItem rowSpan='1' colSpan='1'><Input type='email' borderButtom='black' placeholder='E- mail'></Input></GridItem>
-                    <GridItem rowSpan='1' colSpan='1'><Input type='Message' borderButtom='black' placeholder='Message'></Input></GridItem>  
-                    <GridItem rowSpan='1' colSpan='1'><Button backGroundColor='#CBB26A' width='100%'>Contact us</Button></GridItem>
-                    <GridItem rowSpan='1' colSpan='1'><Flex><Text>Contact</Text><Text>styleShoesByLior@gmail.com</Text></Flex></GridItem>
-                    <GridItem rowSpan='1' colSpan='1'><Flex><Text>Based In</Text><Text>Rehovot, Israel</Text></Flex></GridItem>         
-                </Grid>
+                <Box>
+                    <Flex direction='column'>
+                    <Input borderButtom='black' placeholder='Full Name'/>
+                    <Input type='email' borderButtom='black' placeholder='E- mail'/>
+                    <Input type='Message' borderButtom='black' placeholder='Message'/>  
+                    <Button backGroundColor='#CBB26A' width='100%'>Contact us</Button>
+                    </Flex>
+<Box>
+
+                    <Flex><Text>Contact</Text><Text>styleShoesByLior@gmail.com</Text></Flex>
+                    <Flex><Text>Based In</Text><Text>Rehovot, Israel</Text></Flex>         
+</Box>
+                </Box>
             </Flex>
         
         </Flex>
