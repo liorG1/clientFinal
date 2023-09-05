@@ -1,5 +1,5 @@
 
-import {Flex,Text,Image ,Grid,GridItem,Input,Button} from '@chakra-ui/react'
+import {Flex,Text,Image ,Grid,GridItem,Input,Button,Box} from '@chakra-ui/react'
 
 export default function Contact(){
 
