@@ -59,7 +59,7 @@ export default function ProductPage (){
     />
     <Stack mt='6' spacing='3' key={product.id}>
       <Heading key={product.id} size='md'>{product.name}</Heading>
-      <Text>
+      <Text >
         This sofa is perfect for modern tropical spaces, baroque inspired
         spaces, earthy toned spaces and for people who love a chic design with a
         sprinkle of vintage design.
