@@ -114,10 +114,10 @@ function Nav() {
 
 
 
-        <Link  to="/home" ><Button sx={Link_styles}>home</Button></Link>
+        <Link  to="/home" ><Button sx={Link_styles}>Home</Button></Link>
         <Link to='/products'><Button sx={Link_styles}>Products</Button></Link>
-        <Link to="/about" ><Button sx={Link_styles}>about</Button></Link>
-        <Link to="/contact" ><Button sx={Link_styles}>contact</Button></Link>   
+        <Link to="/about" ><Button sx={Link_styles}>About</Button></Link>
+        <Link to="/contact" ><Button sx={Link_styles}>Contact</Button></Link>   
 {/*         <Link to={'cart'} color="white" ><Image backgroundColor={'#CBB26A'} src="/cart.png"  alt="cart"></Image></Link> */}
 <Cart></Cart>
      {/*    <Flex>

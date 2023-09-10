@@ -67,7 +67,7 @@ export default function Login(){
                     isClosable: true,
                   })
 
-            /* location.href='http://localhost:5173/user' */
+             location.assign('/home') 
             }
             else{
                 setSuccess(false)
