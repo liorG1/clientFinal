@@ -1,4 +1,4 @@
-import { Box, Button, Input,InputGroup ,InputLeftAddon} from '@chakra-ui/react'
+import { Box, Button, Input,InputGroup ,InputLeftAddon,Spinner} from '@chakra-ui/react'
 import {
     FormControl,
     FormLabel,
@@ -53,7 +53,7 @@ function FirstStepContent(props){
 
     const next=props.next
     return (
-        <>
+        <Box beckgroundColor={'#CBB26A'}>
         <h1>Address detalis</h1>
         <Checkbox defaultChecked={false} onChange={()=>{toggle()}}>Originaks detailes:</Checkbox>
         {
@@ -76,7 +76,7 @@ function FirstStepContent(props){
         }
 
 <Button onClick={()=>{next(2)}}>next</Button>
-                </>
+                </Box>
             
         
     )
@@ -94,7 +94,7 @@ function SecondStepContent(props){
    
     
     return (
-        <>
+        <Box backgrounColor={'#CBB26A'}>
         <h1>Peyment detalis</h1>
        
         {
@@ -109,7 +109,7 @@ function SecondStepContent(props){
         }
 
         <Button onClick={()=>{next(3)}}>next</Button>
-                </>
+                </Box>
             
         
     )
@@ -126,6 +126,7 @@ function SecondStepContent(props){
   const products=localStorage.getItem('id').split(',')
   const total_price=localStorage.getItem('total_price')
   console.log(products);
+  const [loading,setLoading]=useState(true)
 
  const fetch=async()=>{
   const response=await axios.post(url,{token,products:products,total_price:total_price})
@@ -151,7 +152,7 @@ function SecondStepContent(props){
     setnewOrder(msg.data.newOrder)
     console.log('new order');
     console.log(newOrder);
-    setSentStatus(msg.data.success)
+    (msg.data.success)
   })
  },[])
 
@@ -159,6 +160,10 @@ function SecondStepContent(props){
   sendMail().then(response=>{
     console.log(response);
     setSuccess(true)
+  }).catch(response=>{
+    console.log(response);
+    setSuccess(false)
+    setLoading(false)
   })
  },[newOrder])
 
@@ -167,9 +172,11 @@ function SecondStepContent(props){
   /* console.log(response); */
 
     return(
-
-        send?<h1>congratulations !</h1>:
+        loading?<Spinner/>:
+        
+        success?<h1>congratulations !</h1>:
         <h1>failed to complete order</h1>
+      
        
     )
 }
@@ -183,10 +190,6 @@ export default function FinishOrder(){
         { title: 'Third', description: 'Select Rooms'/* ,content:<ThirdStepContent/> */},
       ]
 
-      
-        
-      
-      
         const { activeStep, setActiveStep } = useSteps({
           index: 1,
           count: steps.length,
