@@ -1,4 +1,4 @@
-import { Box, Input } from '@chakra-ui/react'
+import { Box, Input,Link } from '@chakra-ui/react'
 
 import {
     FormControl,
@@ -113,7 +113,7 @@ export default function Login(){
         </FormControl>
 
         <button type='submit' onClick={login} >click to login</button>
-
+<Text>Don't have acoount yet? click <Link href='/registrate'>here to regisrtate</Link></Text>
        {/*  {success&&<div>wellcome {userDetails.name}</div>}
         {success==false&&<div>login falild error: {err}</div>} */}
       {/*   {success&&<Link to={'http://localhost:5173/allProducts'}></Link>} */}
