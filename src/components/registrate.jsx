@@ -32,30 +32,10 @@ export default function Registrate(){
         console.log(userDetails);
     }
 
-    const [validEmail,setValidEmail]=useState()
     
 
     const submit= async(e)=>{
         e.preventDefault();
-      /*   console.log(document.querySelector('#email').value);
-       setValidEmail(ValidateEmail(document.querySelector('#email').value)) */
-       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-       if(document.querySelector('#email').value.match(mailformat))
-       {
-     
-       setValidEmail(true)
-       console.log(validEmail);
-    }
-       
-       else{
-      
-        setValidEmail(false)
-        console.log(validEmail);
-       }
-
-
-
-       console.log(validEmail);
         if (!validEmail){
             console.log('cant registrate');
             return 'cant registrate'
@@ -108,23 +88,21 @@ export default function Registrate(){
 
         const toast = useToast()
 
-     
+        const [validEmail,setValidEmail]=useState()
 
         function ValidateEmail(inputText)
                 {
                 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                if(inputText.match(mailformat))
+                if(inputText.value.match(mailformat))
                 {
                 alert("Valid email address!");
                 setValidEmail(true)
-                console.log(validEmail);
                 return true;
                 }
                 else
                 {
                 alert("You have entered an invalid email address!");
                 setValidEmail(false)
-                console.log(validEmail);
                 return false;
                 }
                 }
@@ -150,7 +128,7 @@ export default function Registrate(){
 
         <FormControl id='password' >
         <FormLabel htmlFor='password' required>password</FormLabel>
-        <Input name='password' /* onClick={ ()=>{ValidateEmail(document.querySelector('#email'))}} */  required type='password' onChange={addDetail} />
+        <Input name='password'  required type='password' onChange={addDetail} />
         </FormControl>
 
         <FormControl id='address' >
@@ -171,7 +149,7 @@ export default function Registrate(){
         <Input name='phone_number'  type='tel'  onChange={addDetail} />
         </InputGroup>
         </FormControl>
-        <Button type='submit'  onClick={submit} >click to submit</Button>
+        <Button type='submit' onClick={ ()=>{ValidateEmail(document.querySelector('#email'));submit}}    >click to submit</Button>
 
    {/*      {success&&<div>wellcome {userDetails.name}</div>}
         {success==false&&<div>registrate falild error: {err}</div>} */}
