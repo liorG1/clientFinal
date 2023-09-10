@@ -95,7 +95,7 @@ export default function Registrate(){
         function ValidateEmail(inputText)
                 {
                 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                if(inputText.value.match(mailformat))
+                if(inputText.match(mailformat))
                 {
                 alert("Valid email address!");
                 setValidEmail(true)
