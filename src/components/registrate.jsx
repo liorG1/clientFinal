@@ -37,7 +37,7 @@ export default function Registrate(){
     const submit= async(e)=>{
         e.preventDefault();
         console.log(document.querySelector('#email').value);
-        ValidateEmail(document.querySelector('#email').value)
+       setValidEmail(ValidateEmail(document.querySelector('#email').value))
         if (!validEmail){
             console.log('cant registrate');
             return 'cant registrate'
