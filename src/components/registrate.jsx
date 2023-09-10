@@ -36,6 +36,7 @@ export default function Registrate(){
 
     const submit= async(e)=>{
         e.preventDefault();
+        ValidateEmail(document.querySelector('#email'))
         if (!validEmail){
             console.log('cant registrate');
             return 'cant registrate'
@@ -128,7 +129,7 @@ export default function Registrate(){
 
         <FormControl id='password' >
         <FormLabel htmlFor='password' required>password</FormLabel>
-        <Input name='password' onClick={ ()=>{ValidateEmail(document.querySelector('#email'))}}  required type='password' onChange={addDetail} />
+        <Input name='password' /* onClick={ ()=>{ValidateEmail(document.querySelector('#email'))}} */  required type='password' onChange={addDetail} />
         </FormControl>
 
         <FormControl id='address' >
