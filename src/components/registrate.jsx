@@ -61,6 +61,7 @@ export default function Registrate(){
                         duration: 9000,
                         isClosable: true,
                       })
+                      location.assign('/Login')
                 }
                 else{
                     setSuccess(false)
@@ -95,7 +96,7 @@ export default function Registrate(){
                 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
                 if(inputText.value.match(mailformat))
                 {
-                alert("Valid email address!");
+              
                 setValidEmail(true)
                 return true;
                 }
