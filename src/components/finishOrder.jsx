@@ -53,7 +53,7 @@ function FirstStepContent(props){
 
     const next=props.next
     return (
-        <Box beckgroundColor={'#CBB26A'}>
+        <Box  bg={'#CBB26A'}>
         <h1>Address detalis</h1>
         <Checkbox defaultChecked={false} onChange={()=>{toggle()}}>Originaks detailes:</Checkbox>
         {
@@ -94,7 +94,7 @@ function SecondStepContent(props){
    
     
     return (
-        <Box backgrounColor={'#CBB26A'}>
+        <Box  bg={'#CBB26A'}>
         <h1>Peyment detalis</h1>
        
         {
@@ -162,10 +162,11 @@ function SecondStepContent(props){
   sendMail().then(response=>{
     console.log(response);
     setSuccess(true)
+    setLoading(false)
   }).catch(response=>{
     console.log(response);
    setSuccess(true)
-    setLoading(false)
+    
   })
  },[newOrder])
 
