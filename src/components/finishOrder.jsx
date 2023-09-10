@@ -153,8 +153,6 @@ function SecondStepContent(props){
     console.log('new order');
     console.log(newOrder);
     console.log(msg.data.success);
-    
-    
   })
  },[])
 
@@ -170,15 +168,15 @@ function SecondStepContent(props){
   })
  },[newOrder])
 
-/*   const response=await axios.post(url,{token,products:products}) */
-  
-  /* console.log(response); */
+
+
+
 
     return(
         loading?<Spinner/>:
         
-        success?<h1>congratulations !</h1>:
-        <h1>failed to complete order</h1>
+        success?<><Text color={'#CBB26A'}>congratulations </Text><Text color={'#CBB26A'}>your order complete, check your email box for bill</Text></>:
+        <Text color={'#CBB26A'}>failed to complete order</Text>
       
        
     )
