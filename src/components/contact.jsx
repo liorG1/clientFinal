@@ -10,15 +10,15 @@ export default function Contact(){
                 <Text fontSize='3em' font='bold'>Contact us </Text>
                 <Flex direction='row'gap={'5px'} >
                     <Flex direction='column' gap={'5px'}>
-                    <Input borderButtom='black' placeholder='Full Name'/>
+                    <Input  borderButtom='black' placeholder='Full Name'/>
                     <Input type='email' borderButtom='black' placeholder='E- mail'/>
                     <Textarea  placeholder='Message'/>  
                     <Button backGroundColor='#CBB26A' width='100%'>Contact us</Button>
                     </Flex>
 <Flex direction='column'>
 
-                    <Flex direction='column'><Text  font='bold'>Contact</Text><Text>styleShoesByLior@gmail.com</Text></Flex>
-                    <Flex direction='column'><Text  font='bold'>Based In</Text><Text>Rehovot, Israel</Text></Flex>         
+                    <Flex direction='column'><Text  fontSize='2em'>Contact</Text><Text>styleShoesByLior@gmail.com</Text></Flex>
+                    <Flex direction='column'><Text fontSize='2em' >Based In</Text><Text>Rehovot, Israel</Text></Flex>         
 </Flex>
                 </Flex>
             </Flex>

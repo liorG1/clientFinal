@@ -167,7 +167,7 @@ export default function AllProducts(){
                                     <Heading size='md'>{pro.name}</Heading>
                                     
                                     <Text color='blue.600' fontSize='2xl'>
-                                        {pro.price}
+                                        {pro.price}$
                                     </Text>
                                     </Stack>
                                 </CardBody>
