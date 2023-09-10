@@ -1,4 +1,4 @@
-import { Box, Input } from '@chakra-ui/react'
+import { Box, Input,Text } from '@chakra-ui/react'
 
 import {
     FormControl,
