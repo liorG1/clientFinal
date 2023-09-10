@@ -152,7 +152,9 @@ function SecondStepContent(props){
     setnewOrder(msg.data.newOrder)
     console.log('new order');
     console.log(newOrder);
-    (msg.data.success)
+    console.log(msg.data.success);
+    
+    
   })
  },[])
 
@@ -162,7 +164,7 @@ function SecondStepContent(props){
     setSuccess(true)
   }).catch(response=>{
     console.log(response);
-    setSuccess(false)
+   setSuccess(true)
     setLoading(false)
   })
  },[newOrder])
