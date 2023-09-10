@@ -113,7 +113,7 @@ export default function Login(){
         </FormControl>
 
         <button type='submit' onClick={login} >click to login</button>
-<Text>Don't have acoount yet? click <Link href='/registrate'>here to regisrtate</Link></Text>
+<Text>Don't have acoount yet? click <Link to='/Registrate'>here to regisrtate</Link></Text>
        {/*  {success&&<div>wellcome {userDetails.name}</div>}
         {success==false&&<div>login falild error: {err}</div>} */}
       {/*   {success&&<Link to={'http://localhost:5173/allProducts'}></Link>} */}
