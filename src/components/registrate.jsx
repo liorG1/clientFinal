@@ -36,8 +36,21 @@ export default function Registrate(){
 
     const submit= async(e)=>{
         e.preventDefault();
-        console.log(document.querySelector('#email').value);
-       setValidEmail(ValidateEmail(document.querySelector('#email').value))
+      /*   console.log(document.querySelector('#email').value);
+       setValidEmail(ValidateEmail(document.querySelector('#email').value)) */
+
+       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       if(document.querySelector('#email').value.match(mailformat))
+       {
+       alert("Valid email address!");
+       setValidEmail(true)}
+       else{
+        alert("You have entered an invalid email address!");
+        setValidEmail(false)
+       }
+
+
+
        console.log(validEmail);
         if (!validEmail){
             console.log('cant registrate');
