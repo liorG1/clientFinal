@@ -32,21 +32,25 @@ export default function Registrate(){
         console.log(userDetails);
     }
 
+    const [validEmail,setValidEmail]=useState()
     
 
     const submit= async(e)=>{
         e.preventDefault();
       /*   console.log(document.querySelector('#email').value);
        setValidEmail(ValidateEmail(document.querySelector('#email').value)) */
-
        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
        if(document.querySelector('#email').value.match(mailformat))
        {
-       alert("Valid email address!");
-       setValidEmail(true)}
+     
+       setValidEmail(true)
+       console.log(validEmail);
+    }
+       
        else{
-        alert("You have entered an invalid email address!");
+      
         setValidEmail(false)
+        console.log(validEmail);
        }
 
 
@@ -104,7 +108,7 @@ export default function Registrate(){
 
         const toast = useToast()
 
-        const [validEmail,setValidEmail]=useState()
+     
 
         function ValidateEmail(inputText)
                 {
