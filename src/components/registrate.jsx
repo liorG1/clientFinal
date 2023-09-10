@@ -152,8 +152,6 @@ export default function Registrate(){
         </FormControl>
         <Button type='submit'  onClick={submit} >click to submit</Button>
 
-   {/*      {success&&<div>wellcome {userDetails.name}</div>}
-        {success==false&&<div>registrate falild error: {err}</div>} */}
         </Box>
         <Footer></Footer>
         </>

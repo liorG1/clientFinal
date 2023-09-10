@@ -70,12 +70,7 @@ function Nav() {
     console.log(`user name : ${userName}`);
   }
 
-/*   const logInput=()=>{
-    console.log(document.querySelector('input').value);
-    const brand=document.querySelector('input').value
-    location.assign(`/products/brand/${brand}`)
-  }
- */
+
   return (
     <div style={{'display':'flex','flexDirection':'column','backgroundColor':'black','align-items':'center'}}>
     <Image w={['80%','30%']} borderRadius={'20px'} src="/logo.png"></Image>
@@ -118,12 +113,9 @@ function Nav() {
         <Link to='/products'><Button sx={Link_styles}>Products</Button></Link>
         <Link to="/about" ><Button sx={Link_styles}>About</Button></Link>
         <Link to="/contact" ><Button sx={Link_styles}>Contact</Button></Link>   
-{/*         <Link to={'cart'} color="white" ><Image backgroundColor={'#CBB26A'} src="/cart.png"  alt="cart"></Image></Link> */}
+
 <Cart></Cart>
-     {/*    <Flex>
-                  <SearchIcon onClick={logInput}  h={'100%'} style={{color:'white'}}></SearchIcon>
-                  <Input  w={'min-content'} style={{color:'white'}}  placeholder="enter product name"/> 
-        </Flex> */}
+   
       </Flex>
     
     <Outlet/>

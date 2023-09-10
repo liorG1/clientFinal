@@ -77,18 +77,16 @@ export default function AllProducts(){
             if (PageUp){
                 setFirstProduct(firstProduct+6)
                 setLastProduct(lastProduct+6)
-              /*   console.log('page up');
-                console.log(`first page :${firstProduct},last product ${lastProduct}`); */
+
             }
             if (!PageUp){
                 setFirstProduct(firstProduct-6)
                 setLastProduct(lastProduct-6)
-             /*    console.log('page down');
-                console.log(`first page :${firstProduct},last product ${lastProduct}`); */
+
             }
         },[currentPage])
             
-/* console.log(`first ${firstProduct} last: ${lastProduct}`); */
+
 
         const [brands,setBrands]=useState([])
         const [catagories,setCatagories]=useState([])

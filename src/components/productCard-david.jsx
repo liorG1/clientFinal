@@ -1,4 +1,4 @@
-import {
+/* import {
   Select,
   Input,
   Image,
@@ -116,3 +116,4 @@ export default function ProductById() {
     </>
   );
 }
+ */

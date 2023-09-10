@@ -77,7 +77,7 @@ export default function Login(){
                     duration: 9000,
                     isClosable: true,
                   })
-                /* setError(response.err) */
+             
             }
         } catch (error) {
             console.log(error);
@@ -114,9 +114,7 @@ export default function Login(){
 
         <button type='submit' onClick={login} >click to login</button>
 <Text>Don't have acoount yet? click <Link to='/Registrate'>here to regisrtate</Link></Text>
-       {/*  {success&&<div>wellcome {userDetails.name}</div>}
-        {success==false&&<div>login falild error: {err}</div>} */}
-      {/*   {success&&<Link to={'http://localhost:5173/allProducts'}></Link>} */}
+
       
         </Box>
         <Footer></Footer>

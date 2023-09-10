@@ -32,7 +32,6 @@ function App() {
           <Route path='products' element={<AllProducts/>}></Route>
           <Route path='about' element={<About/>}></Route>
            <Route path='/products/byId/:id'  element={<ProductById/>}/> 
-          {/* <Route path='cart' element={<Cart/>}/> */}
           <Route path='product' element={<Spesific/>}/>
           <Route path='/products/byName/:name' element={<ProductPage/>}/>
           <Route path='/orders/finishOrder' element={<FinishOrder/>}/>

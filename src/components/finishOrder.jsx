@@ -21,8 +21,7 @@ import {
     Stepper,
     useSteps,
   } from '@chakra-ui/react'
-//import { json } from 'react-router-dom'
-//import { STRING } from 'mysql/lib/protocol/constants/types'
+
 
 
 

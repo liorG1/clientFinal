@@ -27,7 +27,7 @@ import {
     });
     const { cartItems, setCart } = useContext(CartContext);
   console.log('current');
- /*  console.log(currentItemn); */
+
  console.log(currentItemn);
   
     const url = `https://server-spuh.onrender.com/products/ById/${currentItemn}`;
