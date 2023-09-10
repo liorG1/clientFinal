@@ -38,6 +38,7 @@ export default function Registrate(){
         e.preventDefault();
         console.log(document.querySelector('#email').value);
        setValidEmail(ValidateEmail(document.querySelector('#email').value))
+       console.log(validEmail);
         if (!validEmail){
             console.log('cant registrate');
             return 'cant registrate'
@@ -99,12 +100,14 @@ export default function Registrate(){
                 {
                 alert("Valid email address!");
                 setValidEmail(true)
+                console.log(validEmail);
                 return true;
                 }
                 else
                 {
                 alert("You have entered an invalid email address!");
                 setValidEmail(false)
+                console.log(validEmail);
                 return false;
                 }
                 }
