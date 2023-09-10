@@ -97,6 +97,7 @@ export default function Registrate(){
                 {
                 alert("Valid email address!");
                 setValidEmail(true)
+                submit()
                 return true;
                 }
                 else
@@ -149,7 +150,7 @@ export default function Registrate(){
         <Input name='phone_number'  type='tel'  onChange={addDetail} />
         </InputGroup>
         </FormControl>
-        <Button type='submit' onClick={ ()=>{ValidateEmail(document.querySelector('#email'));submit}}    >click to submit</Button>
+        <Button type='submit' onClick={ ()=>{ValidateEmail(document.querySelector('#email'))}}    >click to submit</Button>
 
    {/*      {success&&<div>wellcome {userDetails.name}</div>}
         {success==false&&<div>registrate falild error: {err}</div>} */}
